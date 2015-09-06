@@ -13,7 +13,7 @@ need to explicitly define volumes using `-v`.
 docker create \
   --name 'xwiki-persistence' \
   --entrypoint /bin/true \
-  xwiki:7.1
+  hellyna/xwiki:7.1
 ```
 
 ## Run!
@@ -25,7 +25,7 @@ docker run -it --rm \
   --name 'xwiki' \
   --volumes-from 'xwiki-persistence' \
   -p 8080:8080 \
-  xwiki:7.1
+  hellyna/xwiki:7.1
 ```
 
 Try to point your browser to 'http://localhost:8080/' if you are running
