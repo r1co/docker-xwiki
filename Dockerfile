@@ -19,7 +19,9 @@ COPY setenv.sh bin/
 COPY catalina.policy.append catalina.policy.append
 
 RUN cat catalina.policy.append >> conf/catalina.policy && \
-    rm catalina.policy.append
+    rm catalina.policy.append && \
+    echo 'environment.permanentDirectory=/var/local/xwiki' >> \
+        webapps/ROOT/WEB-INF/xwiki.properties
 
 VOLUME ["/usr/local/tomcat/webapps/ROOT/WEB-INF", "/var/local/xwiki"]
 #COPY scripts /scripts
