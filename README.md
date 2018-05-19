@@ -15,7 +15,7 @@ need to explicitly define volumes using `-v`.
 docker create \
   --name 'xwiki-persistence' \
   --entrypoint /bin/true \
-  hellyna/xwiki:7.1
+  r1co/docker-xwiki:latest
 ```
 
 ## Run!
